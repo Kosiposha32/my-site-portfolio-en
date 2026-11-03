@@ -110,9 +110,9 @@ interface Skill {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Pavel Sidorii. Renovation & Finishing",
-    description: "Short clip for a million-subscriber channel",
-    embedUrl: "https://youtube.com/embed/wyg4TuFsAAo",
+    title: "100 DAYS IN THE 2D WORLD OF MINECRAFT HARDCORE",
+    description: "The channel's creator survives for 100 days in a world just one block wide",
+    embedUrl: "https://youtube.com/embed/UcihatjIFPY",
     category: "Video"
   },
   {
@@ -124,9 +124,9 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "FTH | TRADING",
-    description: "Clip for a trading channel",
-    embedUrl: "https://youtube.com/embed/MrZ3nwm0obs",
+    title: "Forsaken BUT the Damage is REAL",
+    description: "The channel's creator compares in game damage to how it would feel in real life on a pain scale",
+    embedUrl: "https://youtube.com/w-mCMBIxTuM",
     category: "Video"
   },
   {
