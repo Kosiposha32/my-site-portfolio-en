@@ -126,7 +126,7 @@ const projects: Project[] = [
     id: 3,
     title: "Forsaken BUT the Damage is REAL",
     description: "The channel's creator compares in game damage to how it would feel in real life on a pain scale",
-    embedUrl: "https://youtube.com/w-mCMBIxTuM",
+    embedUrl: "https://youtube.com/embed/w-mCMBIxTuM",
     category: "Video"
   },
   {
