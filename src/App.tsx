@@ -135,27 +135,6 @@ const projects: Project[] = [
     description: "A video where the main character survives 100 days in the harsh cold of Minecraft",
     embedUrl: "https://youtube.com/embed/Fdq-WK_BhPM",
     category: "Video"
-  },
-  {
-    id: 5,
-    title: "Expert Video",
-    description: "Expert feature on the AMG53 car",
-    embedUrl: "https://youtube.com/embed/2ob-w2ITkMI?",
-    category: "Reels"
-  },
-  {
-    id: 6,
-    title: "Real Estate",
-    description: "Vertical video about real estate",
-    embedUrl: "https://youtube.com/embed/CpPOSS60Pmc",
-    category: "Reels"
-  },
-  {
-    id: 7,
-    title: "Conversational Video",
-    description: "Educational English-language reel with motion design elements",
-    embedUrl: "https://youtube.com/embed/muOMciijf34?",
-    category: "Reels"
   }
 ];
 
@@ -329,8 +308,6 @@ export default function App() {
     document.getElementById(section)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const horizontalProjects = projects.filter((p) => p.category !== 'Reels');
-  const reelsProjects = projects.filter((p) => p.category === 'Reels');
 
   return (
     <div className={cn('min-h-screen transition-colors', theme === 'dark' ? 'bg-[#14141c]' : 'bg-gradient-to-br from-rose-50 via-white to-pink-50')}>
@@ -367,20 +344,6 @@ export default function App() {
               </svg>
             </button>
           </div>
-
-          {/* Статистика — 3 колонки */}
-          <div className="mt-12 sm:mt-16 grid grid-cols-3 gap-4 sm:gap-8 max-w-sm sm:max-w-xl mx-auto">
-            {[
-              { value: '50+', label: 'Projects' },
-              { value: '8+', label: 'Repeat clients' },
-              { value: '1+', label: 'Year of experience' }
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={cn('text-2xl sm:text-4xl xl:text-5xl font-bold', theme === 'dark' ? 'text-slate-100' : 'text-slate-900')}>{stat.value}</div>
-                <div className={cn('mt-1 text-xs sm:text-sm xl:text-base', theme === 'dark' ? 'text-slate-400' : 'text-slate-500')}>{stat.label}</div>
-              </div>
-            ))}
-          </div>
         </div>
 
         <div className={cn('pointer-events-none absolute bottom-0 left-0 right-0 h-20 sm:h-24', theme === 'dark' ? 'bg-gradient-to-b from-transparent to-[#151622]' : 'bg-gradient-to-b from-transparent to-[#f8f5f7]')} />
@@ -398,7 +361,7 @@ export default function App() {
           </div>
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 xl:gap-10">
-            {horizontalProjects.map((project) => (
+            {projects.map((project) => (
               <div key={project.id} className={cn("group rounded-3xl overflow-hidden transition-all hover:-translate-y-2", theme === 'dark' ? 'bg-[#1b1b25] border border-white/5 shadow-lg shadow-black/30 hover:shadow-black/45' : 'bg-white shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-slate-300/50')}>
                 <div className={cn("relative overflow-hidden aspect-video", theme === 'dark' ? 'bg-[#111118]' : 'bg-slate-100')}>
                   {project.embedUrl && <VideoPlayer embedUrl={project.embedUrl} title={project.title} theme={theme} />}
@@ -413,29 +376,6 @@ export default function App() {
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-10 sm:mt-12">
-            <div className="mb-6 text-center">
-              <h3 className={cn('text-2xl sm:text-3xl font-bold', theme === 'dark' ? 'text-slate-100' : 'text-slate-900')}>Reels</h3>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6 xl:gap-8">
-              {reelsProjects.map((project) => (
-                <div key={project.id} className={cn("group w-full max-w-[280px] sm:max-w-[300px] rounded-3xl overflow-hidden transition-all hover:-translate-y-2", theme === 'dark' ? 'bg-[#1b1b25] border border-white/5 shadow-lg shadow-black/30 hover:shadow-black/45' : 'bg-white shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-slate-300/50')}>
-                  <div className={cn("relative mx-auto overflow-hidden aspect-[9/16] max-h-[520px] w-full", theme === 'dark' ? 'bg-[#111118]' : 'bg-slate-100')}>
-                    {project.embedUrl && <VideoPlayer embedUrl={project.embedUrl} title={project.title} theme={theme} vertical />}
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <div className="pointer-events-none absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                      <span className={cn("inline-block rounded-full px-3 py-1 text-xs font-medium backdrop-blur-sm", theme === 'dark' ? 'bg-[#24131a]/90 text-rose-100 border border-white/5' : 'bg-white/90 text-slate-700')}>{project.category}</span>
-                    </div>
-                  </div>
-                  <div className="p-5 xl:p-6 text-center">
-                    <h3 className={cn("text-lg xl:text-xl font-bold mb-2 transition-colors", theme === 'dark' ? 'text-slate-100 group-hover:text-rose-300' : 'text-slate-900 group-hover:text-rose-600')}>{project.title}</h3>
-                    <p className={cn('text-sm xl:text-base leading-relaxed', theme === 'dark' ? 'text-slate-400' : 'text-slate-600')}>{project.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
