@@ -320,26 +320,26 @@ export default function App() {
           <div className={cn("absolute -bottom-24 -left-24 h-56 w-56 sm:-bottom-32 sm:-left-32 sm:h-72 sm:w-72 lg:-bottom-40 lg:-left-40 lg:h-80 lg:w-80 rounded-full blur-3xl animate-pulse", theme === 'dark' ? 'bg-[#2a121f] opacity-45' : 'bg-pink-200 mix-blend-multiply opacity-30')} style={{ animationDelay: '1s' }} />
         </div>
 
-        <div className="relative mx-auto w-full max-w-6xl text-center">
-          <h1 className={cn('mb-5 sm:mb-6 text-4xl sm:text-5xl md:text-6xl xl:text-7xl 2xl:text-8xl font-bold tracking-tight leading-[0.95]', theme === 'dark' ? 'text-slate-100' : 'text-slate-900')}>
+        <div className="relative mx-auto w-full max-w-6xl 2xl:max-w-7xl text-center">
+          <h1 className={cn('mb-5 sm:mb-6 xl:mb-8 text-4xl sm:text-5xl md:text-6xl xl:text-8xl 2xl:text-[7.5rem] font-bold tracking-tight leading-[0.95]', theme === 'dark' ? 'text-slate-100' : 'text-slate-900')}>
             Hi, I&apos;m Kirill
           </h1>
 
-          <p className={cn('mb-4 max-w-4xl mx-auto text-lg sm:text-xl lg:text-2xl 2xl:text-[2rem] leading-relaxed', theme === 'dark' ? 'text-slate-300' : 'text-slate-600')}>
+          <p className={cn('mb-4 xl:mb-6 max-w-4xl mx-auto text-lg sm:text-xl lg:text-2xl xl:text-3xl 2xl:text-[2.6rem] leading-relaxed', theme === 'dark' ? 'text-slate-300' : 'text-slate-600')}>
             Specializing in <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-500 to-pink-600">video editing</span>
           </p>
 
-          <p className={cn('mb-8 sm:mb-10 max-w-3xl mx-auto text-base sm:text-lg xl:text-xl leading-relaxed', theme === 'dark' ? 'text-slate-400' : 'text-slate-500')}>
+          <p className={cn('mb-8 sm:mb-10 xl:mb-12 max-w-3xl xl:max-w-4xl 2xl:max-w-5xl mx-auto text-base sm:text-lg xl:text-2xl 2xl:text-[1.7rem] leading-relaxed', theme === 'dark' ? 'text-slate-400' : 'text-slate-500')}>
             I craft visual stories with an eye for detail. More than a year of experience in the video production industry.
           </p>
 
           <div className="flex justify-center">
             <button
               onClick={() => handleNavigate('portfolio')}
-              className={cn("group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-6 sm:px-8 py-4 text-base sm:text-lg font-semibold text-white transition-all hover:scale-[1.02]", theme === 'dark' ? 'bg-gradient-to-r from-[#5a1f35] to-[#7a2347] shadow-lg shadow-black/30 hover:shadow-black/50' : 'bg-gradient-to-r from-rose-500 to-pink-600 shadow-lg shadow-rose-200 hover:shadow-xl hover:shadow-rose-300')}
+              className={cn("group inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full px-6 sm:px-8 xl:px-10 2xl:px-12 py-4 xl:py-5 2xl:py-6 text-base sm:text-lg xl:text-xl 2xl:text-2xl font-semibold text-white transition-all hover:scale-[1.02]", theme === 'dark' ? 'bg-gradient-to-r from-[#5a1f35] to-[#7a2347] shadow-lg shadow-black/30 hover:shadow-black/50' : 'bg-gradient-to-r from-rose-500 to-pink-600 shadow-lg shadow-rose-200 hover:shadow-xl hover:shadow-rose-300')}
             >
               View my work
-              <svg className="h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="h-5 w-5 xl:h-6 xl:w-6 2xl:h-7 2xl:w-7 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </button>
